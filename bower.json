@@ -1,0 +1,30 @@
+{
+  "name": "custom-toaster",
+  "description": "Custom toaster library with mergeable toasts",
+  "main": [
+    "lib/index.js",
+    "css/style.css"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "toaster",
+    "notifications",
+    "toast"
+  ],
+  "authors": [
+    "Manoj Nama <manoj.nama@outlook.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": false
+}

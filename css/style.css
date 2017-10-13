@@ -1,0 +1,205 @@
+ /* Page styles */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: normal;
+  text-align: center;
+}
+h4 {
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* Toaster Styles */
+.toastr-container {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  height: 100%;
+  padding-left: 30px;
+  overflow: auto;
+}
+.toastr-wrapper {
+  width: 300px;
+  font-family: sans-serif;
+  margin: 12px 4px;
+  background-color: #eee;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  overflow: visible;
+  position: relative;
+}
+.toastr-wrapper:after {
+  content: '';
+  display: table;
+  height: 0;
+  clear: both;
+}
+
+.toastr-badge {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  border-radius: 18px;
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  box-sizing: border-box;
+  left: -16px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 1px solid #fff;
+}
+
+.toastr-wrapper.multiple:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  opacity: 0.6;
+  z-index: -1;
+  border: 1px solid #eee;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  animation: pan 0.3s forwards;
+}
+
+.toastr-wrapper.push {
+  animation: push 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toastr-wrapper.pop {
+  animation: pop 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.toastr-wrapper.toastr-info {
+  background-color: #cee9fa;
+}
+.toastr-wrapper.toastr-info .toastr-badge {
+  background-color: #6cbdf0;
+}
+.toastr-wrapper.toastr-info.multiple:before {
+  background-color: #cee9fa;
+  border: 1px solid #cee9fa;
+}
+.toastr-wrapper.toastr-warning {
+  background-color: #ffd99a;
+}
+.toastr-wrapper.toastr-warning .toastr-badge {
+  background-color: #f6a623;
+}
+.toastr-wrapper.toastr-warning.multiple:before {
+  background-color: #ffd99a;
+  border: 1px solid #ffd99a;
+}
+.toastr-wrapper.toastr-error {
+  background-color: #ffb9b2;
+}
+.toastr-wrapper.toastr-error .toastr-badge {
+  background-color: #e74c3c;
+}
+.toastr-wrapper.toastr-error.multiple:before {
+  background-color: #ffb9b2;
+  border: 1px solid #ffb9b2;
+}
+.toastr-wrapper.toastr-success {
+  background-color: #bfecd9;
+}
+.toastr-wrapper.toastr-success .toastr-badge {
+  background-color: #40c68d;
+}
+.toastr-wrapper.toastr-success.multiple:before {
+  background-color: #bfecd9;
+  border: 1px solid #bfecd9;
+}
+
+.toastr-wrapper .toastr-details {
+  padding: 8px 0 8px 18px;
+  width: 240px;
+  float: left;
+}
+
+.toastr-wrapper .toastr-details .toastr-title {
+  font-size: 14px;
+  color: #404040;
+  text-transform: capitalize;
+}
+
+.toastr-wrapper .toastr-details .toastr-message {
+  padding: 3px 0;
+  color: #5c5c5c;
+  font-size: 12px;
+}
+
+.toastr-wrapper .toastr-action {
+  float: right;
+}
+
+.toastr-wrapper .toastr-action a.action {
+  padding: 26px 14px;
+  display: block;
+  font-size: 12px;
+  text-decoration: none;
+  background-color: #fff;
+  color: #5c5c5c;
+  text-transform: capitalize;
+  border-radius: 0 3px 3px 0;
+  transition: background 0.3s linear, color 0.2s linear;
+}
+
+.toastr-wrapper .toastr-action a.action:hover {
+  color: #fff;
+}
+
+.toastr-wrapper.toastr-success .toastr-action a.action:hover {
+  background-color: #40c68d;
+}
+.toastr-wrapper.toastr-info .toastr-action a.action:hover {
+  background-color: #6cbdf0;
+}
+.toastr-wrapper.toastr-error .toastr-action a.action:hover {
+  background-color: #e74c3c;
+}
+.toastr-wrapper.toastr-warning .toastr-action a.action:hover {
+  background-color: #f6a623;
+}
+
+@keyframes push {
+  from {
+    transform: translateX(100%)
+  }
+  to {
+    transform: translateX(0)
+  }
+}
+
+
+@keyframes pop {
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(100%)
+  }
+}
+
+@keyframes pan {
+  from {
+    transform: translate(0, 0)
+  }
+  to {
+    transform: translate(-6px, -6px)
+  }
+}
